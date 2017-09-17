@@ -8,7 +8,7 @@ import Tkinter
 
 root = Tkinter.Tk()
 root.title("Qweet")
-root.geometry("3000x300")
+root.geometry("500x300")
 
 # These code snippets use an open-source library. http://unirest.io/python
 get = unirest.get("https://andruxnet-random-famous-quotes.p.mashape.com/?cat=famous&count=1",
@@ -106,6 +106,7 @@ def get_api(cfg):
 
 
 keyword = ""
+root.configure(background='#0084b4')
 Lbl1 = Label(root, text="Input username here (ommit the @):")
 Lbl1.pack(side=TOP,padx=5,pady=5)
 Entry1 = Entry(root, bd =1)

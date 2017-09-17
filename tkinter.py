@@ -1,10 +1,16 @@
 from Tkinter import *
 import tkMessageBox
 import Tkinter
+from Pillow import ImageTk, Image
 
 root = Tkinter.Tk()
 root.title("Qweet")
-root.geometry("300x300")
+root.geometry("500x300")
+
+img = ImageTk.PhotoImage(Image.open("QweetsLogo.png"))
+
+
+imglabel = Label(app_root, image=img).grid(row=1, column=1)
 
 Lbl1 = Label(root, text="Input username here (ommit the @):")
 Lbl1.pack(side=TOP,padx=5,pady=5)
